@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}home{% endblock %}
+
+{% block content %}
+
+<!-- 🎵 Hero Spotify Banner -->
+<section class="hero-section">
+    <div class="hero-left">
+        <h1 class="hero-title">Feel the Music</h1>
+        <p class="hero-desc">Discover your vibe. Stream unlimited songs anytime 🎶</p>
+        <a href="#songs" class="play-btn">
+            <i class="fa-solid fa-play"></i> Start Listening
+        </a>
+    </div>
+    <div class="hero-right">
+        <img src="{% static 'banner.webp' %}" class="hero-banner" alt="Music Banner">
+    </div>
+</section>
+
+
+<!-- 🎧 Songs Playlist -->
+<div class="container" id="songs">
+    <div class="songList">
+        <h2 class="playlist-title">🔥 Trending Songs</h2>
+
+        <div class="songCon">
+            {% for i in "0123456789" %}
+            <div class="songItem">
+                <img src="{% static 'song.png' %}" alt="cover">
+                <span class="songName">Song Name {{ forloop.counter }}</span>
+                <div class="songlistplay">
+                    <span class="time">04:12
+                        <i id="{{ forloop.counter0 }}" class="songItemPlay fa-1x fa-solid fa-play"></i>
+                    </span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+
+<!-- 🎛 Bottom Music Player -->
+<div class="bottom">
+    <input type="range" id="myprogressbar" value="0" min="0" max="100">
+    <div class="icons">
+        <i class="fa-solid fa-backward" id="previous"></i>
+        <i class="fa-solid fa-play" id="masterPlay"></i>
+        <i class="fa-solid fa-forward" id="next"></i>
+    </div>
+    <div class="songInfo">
+        <img src="{% static 'playing.gif' %}" width="42px" id="gif">
+        <span id="masterSongName">Agar Tu Hota</span>
+    </div>
+</div>
+
+<script src="{% static 'first.js' %}"></script>
+
+{% endblock %}

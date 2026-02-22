@@ -1,0 +1,453 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.home {
+    background: #121212;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* NAVBAR */
+nav ul {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: #000;
+    color: white;
+    font-size: 18px;
+    list-style-type: none;
+    padding: 0 40px;
+}
+
+nav ul li {
+    padding: 0 18px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+nav ul li a:hover,
+.active a {
+    background: #1db954;
+    color: #000;
+}
+
+.brand img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+/* 🟢 HERO SECTION */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 10%;
+    background: linear-gradient(135deg, #1db954 0%, #0c772b 100%);
+    border-radius: 0 0 30px 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-title {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.hero-desc {
+    font-size: 18px;
+    margin: 12px 0;
+    opacity: .9;
+}
+
+.play-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #fff;
+    color: #000;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.play-btn:hover {
+    background: #000;
+    color: #1db954;
+    transform: scale(1.05);
+}
+
+.hero-banner {
+    width: 420px;
+    animation: float 3s infinite ease-in-out;
+}
+
+
+/* 🎧 SONG LIST CONTAINER */
+.container {
+    min-height: 75vh;
+    width: 80%;
+    margin: 40px auto;
+    border-radius: 15px;
+    padding: 20px 25px;
+    background: #1c1c1c;
+}
+
+.playlist-title {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.songItem {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    background: #242424;
+    color: #fff;
+    margin: 12px;
+    padding: 0 12px;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.songItem:hover {
+    background: #1db954;
+    color: #000;
+    transform: translateY(-5px);
+}
+
+.songItem img {
+    width: 45px;
+    border-radius: 6px;
+}
+
+.time i {
+    cursor: pointer;
+}
+
+/* 🔊 Bottom Player */
+.bottom {
+    background: #000;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border-top: 2px solid #1db954;
+    position: sticky;
+    bottom: 0;
+}
+
+.icons {
+    margin-top: 10px;
+}
+
+.icons i {
+    font-size: 22px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.icons i:hover {
+    color: #1db954;
+    transform: scale(1.2);
+}
+
+#myprogressbar {
+    width: 80%;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+.songInfo {
+    position: absolute;
+    left: 8%;
+    margin-top: 35px;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+
+/* ANIMATIONS */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* ================= ABOUT PAGE ================= */
+
+body.about {
+    background-color: #121212;
+    color: white;
+    font-family: Poppins, sans-serif;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1db954, #0f7a38);
+    color: black;
+    animation: fadeIn 1s ease;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.hero-img {
+    width: 260px;
+    margin-top: 25px;
+    animation: float 3s infinite ease-in-out;
+}
+
+/* INFO SECTION */
+.info-section {
+    padding: 60px;
+    background: #181818;
+    text-align: center;
+}
+
+.info-content {
+    width: 70%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* FEATURES */
+.features-section {
+    padding: 60px 20px;
+    background: #121212;
+}
+
+.section-heading {
+    text-align: center;
+    color: #1db954;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    width: 260px;
+    padding: 25px;
+    background: #1f1f1f;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: #1db954;
+    color: black;
+}
+
+.feature-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+/* TEAM SECTION */
+.team {
+    padding: 60px;
+    text-align: center;
+    background: #181818;
+}
+
+.team-card {
+    width: 250px;
+    margin: auto;
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(29, 185, 84, 0.5);
+}
+
+.team-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* BACK BUTTON */
+.center {
+    text-align: center;
+    padding: 40px;
+}
+
+.home-btn {
+    padding: 12px 25px;
+    background: #1db954;
+    color: black;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.home-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* ================= CONTACT PAGE ================= */
+/* ================= MODERN CONTACT PAGE ================= */
+
+body.contact {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CENTER WRAPPER */
+.contact-wrapper {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GLASS FORM CARD */
+.form-box {
+    width: 420px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+    animation: fadeUp 0.7s ease;
+    margin-top: 22px;
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 28px;
+    color: #1db954;
+}
+
+.form-box p {
+    text-align: center;
+    opacity: .8;
+    margin-bottom: 25px;
+    
+}
+
+/* INPUT FIELDS */
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 15px;
+}
+
+.input-group textarea {
+    height: 120px;
+    resize: none;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* BUTTON */
+.form-box button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    background: #1db954;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-box button:hover {
+    background: #18a74c;
+    transform: scale(1.05);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

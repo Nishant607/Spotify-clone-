@@ -1,0 +1,20 @@
+{% load static %}
+<nav>
+    <ul>
+        <li class="brand">
+            <img src="{% static 'logo.png' %}" alt="Spotify"> Spotify
+        </li>
+
+        <li class="{% if page_class == 'home' %}active{% endif %}">
+            <a href="{% url 'home' %}">Home</a>
+        </li>
+
+        <li class="{% if page_class == 'about' %}active{% endif %}">
+            <a href="{% url 'about' %}">About</a>
+        </li>
+
+        <li class="{% if page_class == 'contact' %}active{% endif %}">
+            <a href="{% url 'contact' %}">Contact</a>
+        </li>
+    </ul>
+</nav>
