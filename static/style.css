@@ -451,3 +451,107 @@ body.contact {
         transform: translateY(0);
     }
 }
+
+
+
+
+
+
+/* ================= SIGNUP PAGE ================= */
+
+body.signup {
+    background: linear-gradient(135deg, #1db954, #0f7a38);
+    min-height: 100vh;
+}
+
+/* Center Wrapper */
+.signup-wrapper {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glass Card */
+.signup-card {
+    width: 420px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    animation: fadeUp 0.8s ease;
+    transition: 0.4s;
+}
+
+.signup-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 60px rgba(29,185,84,0.6);
+}
+
+.signup-card h2 {
+    text-align: center;
+    color: #1db954;
+    margin-bottom: 10px;
+}
+
+.signup-card p {
+    text-align: center;
+    opacity: .8;
+    margin-bottom: 25px;
+}
+
+/* Input Group */
+.signup-card input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    outline: none;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    transition: 0.3s;
+}
+
+.signup-card input:focus {
+    border: 2px solid #1db954;
+    box-shadow: 0 0 12px #1db954;
+    transform: scale(1.02);
+}
+
+.signup-card input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* Button */
+.signup-card button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(135deg, #1db954, #0f7a38);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-card button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 25px #1db954;
+}
+
+.signup-card button:active {
+    transform: scale(0.95);
+}
+
+/* Error */
+.error-msg {
+    text-align: center;
+    color: #ff4d4d;
+    margin-bottom: 15px;
+}
+body.signup {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
